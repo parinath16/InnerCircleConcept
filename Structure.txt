@@ -1,0 +1,84 @@
+
+ict-forex-trading/
+│
+├── README.md
+├── requirements.txt
+├── .env
+├── .gitignore
+│
+├── config/
+│   ├── settings.py
+│   ├── instruments.py
+│   └── risk.py
+│
+├── Data/
+│   ├── historical/
+│   │   ├── EURUSD_M1.csv
+│   │  
+│   ├── log/
+│   │   ├── DataFeed.log
+|   |
+│   ├── metadata/
+│   │   ├── Last_Time.json
+│   │  
+│   │
+│   └── temp/
+│       ├── buffer.csv
+|
+│ 
+├── core/
+│   ├── __init__.py
+│   ├── context.py
+│   ├── bias.py
+│   ├── liquidity.py
+│   ├── structure.py
+│   ├── imbalance.py
+│   ├── orderblock.py
+│   ├── sessions.py
+│   └── validator.py
+│
+├── riskMangement/
+│   ├── __init__.py
+│   ├── position_size.py
+│   ├── stop_loss.py
+│   ├── take_profit.py
+│   └── risk_guard.py
+│
+├── execution/
+│   ├── __init__.py
+│   ├── oanda_executor.py
+│   ├── paper_executor.py
+│   └── trade_manager.py
+│
+├── alerts/
+│   ├── __init__.py
+│   ├── telegram.py
+│   └── logger.py
+│
+├── DataFeed/
+│   ├── __init__.py
+│   ├── Bootstrap.py
+│   └── ForexRateApi.py
+|   |__ LiveCollection.py
+|   |__ Persistance.py
+|
+│
+├── backtest/
+│   ├── __init__.py
+│   ├── engine.py
+│   ├── metrics.py
+│   └── report.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── time_utils.py
+│   ├── math_utils.py
+│   └── decorators.py
+│
+├── tests/
+│   ├── test_bias.py
+│   ├── test_liquidity.py
+│   ├── test_risk.py
+│   └── test_validator.py
+│
+└── main.py
