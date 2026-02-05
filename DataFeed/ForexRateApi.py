@@ -1,7 +1,7 @@
 import requests
 
 BASE_URL = "https://api.forexrateapi.com/v1"
-API_KEY = "dc24d1bb43c19507540f75ed5700a1fb"
+API_KEY = " "
 
 
 def fetch_candles(pair, start_time=None, limit=500):
@@ -15,13 +15,13 @@ def fetch_candles(pair, start_time=None, limit=500):
     }
 
     if start_time:
-        params["start_time"] = start_time  # ISO or timestamp
+        params["start_time"] = start_time  
 
     r = requests.get(f"{BASE_URL}/candles", params=params)
     r.raise_for_status()
 
     candles = r.json()["data"]
-    candles.reverse()  # oldest → newest
+    candles.reverse() 
 
     return [
         {
